@@ -1,0 +1,164 @@
+/* mainwindow 样式*/
+MainWindow {
+    /* 背景颜色设置为深灰色，适合用于深色主题的界面设计 */
+    background-color:rgb(46,47,48);
+}
+/* 菜单栏基本样式*/
+QMenuBar{
+    /* 文字颜色设置为浅灰色，以保证在深色背景上的可读性 */
+    color:rgb(231,231,231);
+    /* 背景颜色设置为深灰色 ，与 MainWindow 的背景颜色一致 */
+    background-color:rgb(46,47,48);
+}
+/* 菜单项基本样式*/
+QMenu{
+    /* 菜单项的文字颜色设置为浅灰色 */
+    color:rgb(231,231,231);
+    /* 菜单项的背景颜色设置为稍浅的灰色，以区分菜单栏的颜色 */
+    background-color:rgb(55,55,55);
+}
+/* 菜单栏选中条目时 */
+QMenuBar::item:selected {
+    /* 当菜单栏中的某一项被选中时，其背景颜色变为更深的灰色，以增强视觉效果 */
+    background-color:rgb(80,80,80);
+}
+/* 菜单项选中动作项条目时 */
+QMenu::item:selected {
+    /* 当菜单项中的某一项被选中时，其背景颜色变为蓝色，可以更容易地区分选中状态 */
+    background-color:rgb(39,96,154);
+}
+/*==============================================================*/
+/* 向导框 */
+QWizard {
+    /* 浅灰色 */
+    color:rgb(231,231,231);
+    /* 深灰色 */
+    background-color:rgb(46,47,48);
+}
+/* 向导框中的标签 */
+QWizard QLabel#lb_Tips {
+    /* 红色 */
+    color: red;
+}
+/*==============================================================*/
+
+ProTree {
+    border-color: #9F9F9F;
+    border-style: solid;
+    border-width: 1px 1px 1px 1px;
+    padding-right: 10px;
+}
+
+QLabel#lb_ProList {
+    color: rgb(231,231,231);
+    border-color: #9F9F9F;
+    border-style: dotted;
+    border-width: 0 0 1px 0;
+    padding-bottom: 10px;
+    margin-bottom: 5px;
+}
+
+QTreeView {
+    color:rgb(231,231,231);
+    background-color:rgb(46,47,48);
+    border: 0px;
+}
+
+QTreeView::item:hover {
+    background: rgb(38, 95, 153);
+}
+
+QTreeView::item:selected {
+    background: rgb(38, 95, 153);
+}
+
+QTreeView::branch:open:has-children:!has-siblings,
+QTreeView::branch:open:has-children:has-siblings
+{image: url(:/res/icon/down.png);}
+
+QTreeView::branch:closed:has-children:!has-siblings,
+QTreeView::branch:closed:has-children:has-siblings
+{image: url(:/res/icon/right.png);}
+/*==============================================================*/
+/* 定义名为 PicShow 的控件的样式 */
+PicShow {
+    /* 设置控件的边框颜色为浅灰色 */
+    border-color: #9F9F9F;
+    /* 设置控件的边框样式为实线 */
+    border-style: solid;
+    /* 设置控件的边框宽度，所有四边均为1像素 */
+    border-width: 1px 1px 1px 1px;
+    /* 设置控件内的填充距离，即内容与边框之间的距离为10像素 */
+    padding: 10px;
+    /* 设置控件的背景颜色为深灰色 */
+    background: rgb(64,66,68);
+}
+/* 定义两个具有特定ID的按钮的样式 */
+#pbtn_PreviousPic, #pbtn_NextPic {
+    /* 设置按钮的边框宽度为0像素，即无边框 */
+    border: 0px;
+}
+/*==============================================================*/
+/* 设置名为 SlideShow 的控件的样式 */
+SlideShow {
+    /* 设置控件的文字颜色 */
+    color: rgb(231, 231, 231); /* 浅灰色文字 */
+
+    /* 设置控件的背景颜色 */
+    background-color: rgb(46, 47, 48); /* 深灰色背景 */
+}
+
+/* 设置名为 lwgt_Preview 的控件的样式 */
+#lwgt_Preview {
+    /* 设置控件的文字颜色 */
+    color: rgb(231, 231, 231); /* 浅灰色文字 */
+
+    /* 设置控件的背景颜色 */
+    background-color: rgb(46, 47, 48); /* 深灰色背景 */
+
+    /* 设置控件的边框为无边框 */
+    border: 0px;
+}
+
+/* 当鼠标悬停在 lwgt_Preview 的项上时的样式 */
+#lwgt_Preview::item:hover {
+    /* 设置项的背景颜色 */
+    background: rgb(38, 95, 153); /* 深蓝色背景 */
+}
+
+/* 当项被选中时的样式 */
+#lwgt_Preview::item:selected {
+    /* 设置项的背景颜色 */
+    background: rgb(38, 95, 153); /* 深蓝色背景 */
+}
+
+/* 当项被选中且处于活动状态时的样式 */
+#lwgt_Preview::item:selected:active {
+    /* 设置项的边框 */
+    border: 2px solid #FFFFFF; /* 白色边框 */
+}
+
+/* 再次定义项被选中时的样式 */
+#lwgt_Preview::item:selected {
+    /* 设置项的边框 */
+    border: 2px solid #FFFFFF; /* 白色边框 */
+}
+
+/* 设置名为 wgt_Pre 的控件的左侧外边距 */
+#wgt_Pre {
+    /* 设置左侧外边距 */
+    margin-left: 10px;
+}
+
+/* 设置名为 wgt_Next 的控件的右侧外边距 */
+#wgt_Next {
+    /* 设置右侧外边距 */
+    margin-right: 10px;
+}
+
+/* 定义四个具有特定ID的按钮的样式 */
+#pbtn_Pre, #pbtn_Next, #pbtn_Close, #pbtn_Play {
+    /* 设置按钮的边框宽度为0像素，即无边框 */
+    border: 0px;
+}
+/*==============================================================*/
